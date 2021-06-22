@@ -6,13 +6,97 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/txtNumero1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="@string/insiraOPrimeiroNumero"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/txtNumero2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/insiraOSegundoNumero"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumero1"
+        app:layout_constraintStart_toStartOf="@+id/txtNumero1"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero1" />
+
+    <ToggleButton
+        android:id="@+id/tglSoma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textOff="@string/soma"
+        android:textOn="@string/soma"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumero2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtNumero2"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero2" />
+
+    <ToggleButton
+        android:id="@+id/tglSubtracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textOff="@string/subtracao"
+        android:textOn="@string/subtracao"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumero2"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/txtNumero2"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero2" />
+
+    <ToggleButton
+        android:id="@+id/tglMultiplicacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textOff="@string/multiplicacao"
+        android:textOn="@string/multiplicacao"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumero2"
+        app:layout_constraintHorizontal_bias="0.663"
+        app:layout_constraintStart_toStartOf="@+id/txtNumero2"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero2" />
+
+    <ToggleButton
+        android:id="@+id/tglDivisao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textOff="@string/divisao"
+        android:textOn="@string/divisao"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumero2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtNumero2"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero2" />
+
+    <TextView
+        android:id="@+id/lblResultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumero2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtNumero2"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
